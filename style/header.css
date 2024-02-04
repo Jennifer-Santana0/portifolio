@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(228, 217, 217);
+}
+img{
+    pointer-events: none;
+}
+
+:root{
+    /* cored do fundo */
+    --fundo-black: black;
+    --fundo-black-2: #19191a;
+    --fundo-gray: #464646;
+    --fundo-verde-es: rgb(13, 141, 107);
+    --fundo-verde: #042f2d;
+    --fundo-verde-2: #2fbc90;
+    --fundo-gary: #ccc;
+    --fundo-gray-2: #ecebeb;
+    --fundo-yellow: #edb106;
+    --fundo-yellow-2: #edf222;
+    /* cores da letras */
+    --cor-gary: #ccc;
+    --cor-white: #fff;
+    --cor-verde: #2ca880;
+    --cor-verde-2: #2ca880
+} 
+header{
+    width: 100%;
+    height: 100px;
+    background-color: var(--fundo-black);
+    padding: 0 5%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+#container_header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a{
+    text-decoration: none;
+    color: var(--cor-white);
+    font-size: 20px;
+    margin-left: 15px;
+}
+nav a:hover{
+    color: var(--cor-gary);
+}
+/* configuracao do btn modo dark e light */
+#menu_desktop{
+    display: flex;
+}
+.modo_dl{
+    width: 60px;
+    height: 30px;
+    background-color: var(--fundo-yellow-2);
+    margin-left: 18px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 3px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.modo_dl span{
+    background-color: var(--fundo-yellow);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.modo_dl span img {
+    transform: scale(0.8);
+}
+/* se tiver o tema dark... */
+body.dark .modo_dl{
+    justify-content: end;
+    background-color: var(--fundo-verde-2);
+}
+body.dark .modo_dl span{
+    background-color: var(--fundo-verde-es);
+}
+body.dark{
+    background-color: var(--fundo-black-2);
+}
+body.dark main div:first-child h1{
+    color: #2ca880;
+}
+body.dark h1::selection,body.dark h2::selection,body.dark br::selection{
+    background-color: var(--fundo-verde);
+    color: var(--fundo-black);
+}
+body.dark h2{
+    color: var(--cor-white);
+}
+body.dark p{
+    color: var(--cor-white);
+}
+body.dark p::selection,body.dark b::selection{
+    color: var(--cor-verde);
+    background-color: var(--fundo-gray);
+}
+body.dark #projetos p{
+    color: var(--cor-black);
+}
+body.dark a{
+    color: var(--cor-verde);
+}
+body.dark a:hover{
+    color: #ccc;
+}
+body.dark header{
+    border-bottom: 1px solid var(--fundo-verde);
+}
+body.dark footer i{
+    color: var(--cor-verde);
+}
+/* configuracao do botao mobile */
+#container_header #btn_mobile{
+    width: 50px;
+    height: 50px;
+    background-color: var(--fundo-gray-2);
+    border-radius: 5px;
+    display: none;
+    cursor: pointer;
+}
+#btn_mobile span{
+    width: 90%;
+    height: 3px;
+    display: block;
+    background-color: var(--fundo-gary);
+    position: relative;
+    margin: 10px auto;
+    transform-origin: center;
+    transition: 0.4s;
+}
+/* configurando a animacao do botao */
+#btn_mobile.animacao_btn_menu span:first-child{
+    transform: translateY(8px) rotate(-45deg);
+    background-color: red;
+}
+#btn_mobile.animacao_btn_menu span:nth-child(2){
+    display: none;
+}
+#btn_mobile.animacao_btn_menu span:last-child{
+    transform: translateY(-5px) rotate(45deg);
+    background-color: red;
+}
+/* configuracao do menu mobile */
+#menu_mobile{
+    background-color: var(--fundo-gray);
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    height: calc(100vh - 100px);
+    display: none;
+}
+#menu_mobile nav{
+    display: flex;
+    flex-direction: column;
+}
+#menu_mobile nav a{
+    margin: 5%;
+}
+#menu_mobile nav a:hover,#menu_mobile nav a:active{
+    color: #2c2c2c;
+}
+#menu_mobile .modo_dl{
+    margin: 5%;
+}
+/* configuracao da animacao do menu mobile */
+#menu_mobile.animacao_show_menu_mobile {
+    display: block;
+}
+
+

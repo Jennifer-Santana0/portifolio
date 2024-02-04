@@ -1,0 +1,27 @@
+@media screen and (max-width: 900px){
+    #menu_desktop{
+        display: none;
+    }
+    #container_header #btn_mobile{
+        display: block;
+    }
+    /* configuracao da sessao sobre mim */
+    main{
+        flex-direction: column;
+        padding-top: 15%;
+    }
+    /* configuracao sessao tecnologia */
+    #container_tecnologia{
+        padding-top: 15%;
+    }
+    /* configuracao sessao projetos */
+    .cards{
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width: 500px){
+    main div:first-child h1{
+        font-size: 35px;
+    }
+}

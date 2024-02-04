@@ -1,0 +1,53 @@
+:root{
+    --fundo-azul: rgb(78, 231, 231);
+    --fundo-verde: #0e9f71;
+}
+
+#container_tecnologia{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10%;
+}
+    
+#div_tec,#div_tec_p{
+    width: 100%;
+    min-height: 30vh;
+}
+#div_tec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+}
+#div_tec_p{
+    padding-bottom: 10%;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+h2{
+    margin-bottom: 20px;
+    color: rgb(26, 164, 164);
+    font-size: 30px;
+}
+body.dark h2{
+    color: #2ca880;
+}
+.tec_imgs{
+    padding-top: 10px;
+    cursor: pointer;
+}
+.tec_p{
+    display: none;
+    width: 80%;
+    margin: auto;
+}
+.tec_p_show{
+    display: block;
+}
+.borda_azul{
+    border-top: 5px solid var(--fundo-azul);
+}
+.borda_verde{
+    border-top: 5px solid var(--fundo-verde);
+}
